@@ -36,6 +36,7 @@ const Manager = () => {
     setpasswordArray([...passwordArray, {...form,id:uuidv4()}]);
     localStorage.setItem("passwords", JSON.stringify([...passwordArray, {...form,id:uuidv4()}]));
     console.log([...passwordArray, form]);
+    setForm({ site: "", username: "", password: "" })
   };
   const deletePassword = (id) => {
     console.log("Deleting id",id)
